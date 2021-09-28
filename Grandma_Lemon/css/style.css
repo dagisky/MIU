@@ -1,0 +1,100 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	line-height: 1;
+	color: #404040;
+	font-size: 11pt;
+	font-family: Georgia, Garamond, sans-serif;
+	padding-right: 10%;
+	padding-left: 10%;
+	background-image: url("../images/silverware.jpg");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #A4A400;
+	background-color: #F0F0F0;
+	font-family: Lucida Sans Unicode, Helvetica, Arial, sans-serif;
+	text-decoration: underline;
+}
+
+header > h1{
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.main-container h1{
+	font-size: 18pt;		
+}
+.main-container ul{
+	list-style-image: url("../images/pie_icon.gif");
+}
+
+a{
+	color: #A4A400;
+}
+
+span.tooltip{
+    position:relative;
+    text-decoration: underline;
+}
+span.tooltip:hover{
+	text-decoration:none;
+	cursor: pointer;
+}
+span.tooltip:after{
+	content: attr(tip);
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:90%;
+	line-height:1.2em;
+	color:#fff;
+	width:200px;
+	padding:5px 10px;
+	border-radius:6px;
+	background:#c00d3f;
+	background:-webkit-linear-gradient(#c00d3f, #7b0a2a);
+	background:-moz-linear-gradient(#c00d3f, #7b0a2a);
+	background:-o-linear-gradient(#c00d3f, #7b0a2a);
+	background:-ms-linear-gradient(#c00d3f, #7b0a2a);
+	background:linear-gradient(#c00d3f, #7b0a2a);
+	-moz-box-shadow: 3px 3px 4px rgba(0,0,0, .65);
+	-webkit-box-shadow: 3px 3px 4px rgba(0,0,0, .65);
+	box-shadow: 3px 3px 4px rgba(0,0,0, .65);
+	position:absolute;
+	top:27px;
+	left:-10px;
+	display:none;
+}
+span.tooltip:before{
+	z-index:1000;
+	position:absolute;
+	content:"";
+	top:15px;
+	left:0px;
+	border-right:7px transparent solid;
+	border-left:7px transparent solid;
+	display:none;
+}
+span.tooltip:hover{
+	z-index:1000;
+	position:relative;
+	color:#8325f7;
+}
+span.tooltip:hover:after{
+	display:block;
+}
+span.tooltip:hover:before{
+	display:block;
+}
+
+span.strikethrugh{
+	text-decoration: line-through;
+}
+p.comment{
+	background-color: #FFFFA8;
+	font-style: italic;
+}
