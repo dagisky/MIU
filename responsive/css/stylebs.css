@@ -1,0 +1,46 @@
+
+.header{
+	background-color: #b6d9e6;
+}
+.header > h1{
+	text-align: center;
+}
+
+
+nav{
+	background-color: #334c4d;
+}
+
+nav > a{
+	border-right: 1px solid black;
+	color: white;
+	font-weight: bold;
+}
+
+.nav-link{
+	border-right: 1px solid black;
+	color: white;
+	font-weight: bold;
+}
+
+.main > div{
+	height: 750px;
+	background: #bcbcbc;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.main div:first-child{
+	background-color: #ababab;
+}
+
+.main div:last-child{
+	background-color: #cdcdcd;
+}
+
+
+footer{
+	text-align: center;
+	background-color: #334c4d;
+}
+
