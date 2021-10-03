@@ -1,0 +1,69 @@
+.container
+{
+    width: 960px;
+    margin: 0 auto;
+}
+
+#text-area{
+	font-family: monospace;
+	width: 100%;
+}
+
+.tiny{
+    font-size: 7pt;
+}
+
+.small{
+    font-size: 10pt;
+}
+.medium{
+    font-size: 12pt;
+}
+.large{
+    font-size: 16pt;
+}
+.extralarge{
+    font-size: 24pt;
+}
+.xxl{
+    font-size: 32pt;
+}
+
+
+
+fieldset{
+     border: 5px solid black;
+     display: inline;
+}
+legend {
+   text-align: left;
+}
+article{
+    alignment-adjust: central;
+}
+button{
+    width: 47%;
+}
+body{
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+    background-color:#CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
+   
+}
+header{
+    font-size: 32pt;
+    font-weight: bold;
+    margin:0px;
+    
+}
+select{
+    width:98%;
+}
+#validate{
+    right:0px;
+    position: fixed;
+}
