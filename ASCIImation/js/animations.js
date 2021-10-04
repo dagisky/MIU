@@ -666,7 +666,7 @@ function startAnimation(animationType) {
         playing = true;
         return setInterval(() => { 
                 if(i >= animation.length){i = 0;};                           
-                canvas.innerHTML = "";
+                canvas.innerHTML = BLANK;
                 canvas.setAttribute('class', style);
                 canvas.innerHTML = animation[i]; 
                 i++;    
@@ -682,7 +682,7 @@ function stopAnimation(interval){
     if(playing){
         let canvas = document.getElementById("text-area");
         clearInterval(interval);
-        canvas.innerHTML = "";
+        canvas.innerHTML = BLANK;
         playing = false;
     }   
 
@@ -707,8 +707,8 @@ let animate = function (){
     stopBtn.onclick = function(){
         stopAnimation(canvasInterval);
         stopBtn.disabled = true; 
-    }
-}
+    };
+};
 
-window.addEventListener('load', animate, false )
+window.addEventListener('load', animate, false );
 
