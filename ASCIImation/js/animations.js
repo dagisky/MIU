@@ -658,7 +658,7 @@ let i = 0;
 
 
 function startAnimation(animationType) {
-        "use strict"
+        "use strict";
         let canvas = document.getElementById("text-area"); 
         let fontSize = document.getElementById("fontsize");
         let animation = ANIMATIONS[animationType].split("====="); 
@@ -677,7 +677,7 @@ function startAnimation(animationType) {
 
 
 function stopAnimation(interval){
-    "use strict"
+    "use strict";
     if(playing === true){
         let canvas = document.getElementById("text-area");
         clearInterval(interval);
@@ -688,6 +688,7 @@ function stopAnimation(interval){
 }
 
 let animate = function (){
+    "use strict";
     let start = document.getElementById("start");
     let stopBtn = document.getElementById("stop");
     let turboBtn = document.getElementById("turbo");
