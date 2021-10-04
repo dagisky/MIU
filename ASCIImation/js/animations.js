@@ -658,13 +658,14 @@ let i = 0;
 
 
 function startAnimation(animationType) {
+        "use strict"
         let canvas = document.getElementById("text-area"); 
         let fontSize = document.getElementById("fontsize");
         let animation = ANIMATIONS[animationType].split("====="); 
         let style = fontSize.options[fontSize.selectedIndex].getAttribute('label'); 
         playing = true;
         return setInterval(() => { 
-                if(i >= animation.length){i = 0;};                           
+                if(i >= animation.length){i = 0;}                           
                 canvas.innerHTML = BLANK;
                 canvas.setAttribute('class', style);
                 canvas.innerHTML = animation[i]; 
@@ -676,6 +677,7 @@ function startAnimation(animationType) {
 
 
 function stopAnimation(interval){
+    "use strict"
     if(playing === true){
         let canvas = document.getElementById("text-area");
         clearInterval(interval);
