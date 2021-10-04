@@ -679,7 +679,7 @@ function startAnimation(animationType) {
 
 
 function stopAnimation(interval){
-    if(playing){
+    if(playing === true){
         let canvas = document.getElementById("text-area");
         clearInterval(interval);
         canvas.innerHTML = BLANK;
@@ -698,7 +698,7 @@ let animate = function (){
         }else{
             refreshRate = 200;
         }
-        if(playing){stopAnimation(canvasInterval);};
+        if(playing){stopAnimation(canvasInterval)};
         let animType = document.getElementById("animation").value; 
         canvasInterval = startAnimation(animType);
         stopBtn.disabled = false;      
