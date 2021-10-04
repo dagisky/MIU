@@ -662,7 +662,7 @@ function startAnimation(animationType) {
         let canvas = document.getElementById("text-area"); 
         let fontSize = document.getElementById("fontsize");
         let animation = ANIMATIONS[animationType].split("====="); 
-        let style = fontSize.options[fontSize.selectedIndex].getAttribute('data'); 
+        let style = fontSize.options[fontSize.selectedIndex].getAttribute('label'); 
         playing = true;
         return setInterval(() => { 
                 if(i >= animation.length){i = 0;};                           
