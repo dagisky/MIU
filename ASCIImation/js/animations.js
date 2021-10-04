@@ -642,11 +642,11 @@ var DIVE = "  o\n" +
 // such as ANIMATIONS["Bike"] or ANIMATIONS["Dive"]
 var ANIMATIONS = [];
 ANIMATIONS.Blank = ANIMATIONS.blank = ANIMATIONS.BLANK = "";
-ANIMATIONS["Custom"] = ANIMATIONS["custom"] = ANIMATIONS["CUSTOM"] = CUSTOM;   // you could change the value of this in your code
-ANIMATIONS["Exercise"] = ANIMATIONS["exercise"] = ANIMATIONS["EXERCISE"] = EXERCISE;
-ANIMATIONS["Juggler"] = ANIMATIONS["juggler"] = ANIMATIONS["JUGGLER"] = JUGGLER;
-ANIMATIONS["Bike"] = ANIMATIONS["bike"] = ANIMATIONS["BIKE"] = BIKE;
-ANIMATIONS["Dive"] = ANIMATIONS["dive"] = ANIMATIONS["DIVE"] = DIVE;
+ANIMATIONS.Custom = ANIMATIONS.custom = ANIMATIONS.CUSTOM = CUSTOM;   // you could change the value of this in your code
+ANIMATIONS.Exercise = ANIMATIONS.exercise = ANIMATIONS.EXERCISE = EXERCISE;
+ANIMATIONS.Juggler = ANIMATIONS.juggler = ANIMATIONS.JUGGLER = JUGGLER;
+ANIMATIONS.Bike = ANIMATIONS.bike = ANIMATIONS.BIKE = BIKE;
+ANIMATIONS.Dive = ANIMATIONS.dive = ANIMATIONS.DIVE = DIVE;
 
 
 
@@ -658,7 +658,6 @@ let i = 0;
 
 
 function startAnimation(animationType) {
-    if(!playing){
         let canvas = document.getElementById("text-area"); 
         let fontSize = document.getElementById("fontsize");
         let animation = ANIMATIONS[animationType].split("====="); 
@@ -672,9 +671,7 @@ function startAnimation(animationType) {
                 i++;    
 
         }, refreshRate);
-    }else{
-        return null;
-    }
+ 
 }
 
 
@@ -698,7 +695,7 @@ let animate = function (){
         }else{
             refreshRate = 200;
         }
-        if(playing){stopAnimation(canvasInterval)};
+        if(playing === true){stopAnimation(canvasInterval);}
         let animType = document.getElementById("animation").value; 
         canvasInterval = startAnimation(animType);
         stopBtn.disabled = false;      
