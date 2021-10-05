@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Bod</title>	
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;			
+		}
+		header{
+			background-color: black;
+			border-bottom: 3px solid gray;
+		}
+		.containerdiv{			
+			display: grid;
+			grid-template-rows: 2vw 4vw 35vw 5vw ;
+		}
+		#nav{
+			display: flex;
+			background-color: lightblue;
+			background: rgb(2,0,36);
+			background: linear-gradient(3deg, rgba(2,0,36,1) 5%, rgba(42,42,187,1) 49%, rgba(0,212,255,1) 100%);
+			flex-flow: row;
+			column-gap: 5%;
+			font-family: monospace cursive sans-serif;
+			font-size: xx-large;
+			color: white;
+			padding-left: 20px;
+		}
+
+		#nav > div{
+			padding-top: 10px;
+			padding-right: 20px;
+			border-right: 3px solid white;
+
+		}
+
+		#nav a{			
+			color: white;
+			text-decoration: none;
+		}
+		#footer{
+			background-color: darkgray;
+		}
+
+		.form{
+			display: grid;
+			font-family: cursive monospace sans-serif;
+			font-size: large;
+			margin-top: 5vw;				
+			grid-template-columns: 50% 50%;	
+			padding-left: 100px;	
+			margin-bottom: 100px;
+		}
+
+		
+		.form input{
+			height: 60px;
+			width: 30vw;
+			border-radius: 10px;
+			border: 1px solid lightgray;	 
+
+		}
+
+		.form select{
+			height: 60px;
+			width: 30vw;
+			border-radius: 10px;
+			border: 1px solid lightgray;
+		}
+
+		#logo{
+			flex
+		}
+
+		#buttons{
+			float: right;
+			column-gap: 1vw;
+			margin-left: auto;
+		}
+
+		#buttons > button{
+			margin-right: 50px;			
+		}
+
+		#rightNav > button{
+			height: 50px;
+			margin-top: 5px;
+		}
+
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="containerdiv">
+		<header></header>
+		<nav id="nav">
+			<div id="logo">MUM Global DOM Market::: SRM System</div>
+			<div class="menuItem"><a href="">Products</a></div>
+			<div class="menuItem"><a href="">Supliers</a></div>
+			<div id="rightNav">
+				<span>Hello!</span>
+				<button type="button" class="btn btn-light">Sign Out</button>	
+			</div>
+		</nav>
+		<div id="main">
+			<form class="form">
+				<div>
+					<div>Product Number <br><input pattern="" type="text" name="productNumber"> </div>
+					<div>Name <br><input type="text" name="productNumber"> </div>
+					<div>Unit Price <br><input type="text" name="productNumber"> </div>
+				</div>
+				<div>
+					<div>Quantity in Stock <br><input type="text" name="quantity"> </div>
+					<div>Supplier <br><select>
+							<option></option>
+							<option>FOO</option>
+							<option>LOLO</option>
+							<option>POO</option>
+						</select>
+					</div>
+					<div>Date supplied <br><input type="text" name="supplyDate"> </div>
+				</div>
+			</form> 
+			<div id="buttons">
+				<button type="button" class="btn btn-outline-secondary">Reset</button> 
+				<button type="button" class="btn btn-outline-danger">Cancelr</button> 
+				<button type="button" class="btn btn-outline-primary">Add Product</button>
+			</div>
+
+		</div>
+		<div id="footer"></div>
+	</div>
+
+</body>
+</html>
