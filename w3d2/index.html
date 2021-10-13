@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<title>Circles</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div id="side">
+			<form id="form-control">
+				<div>
+					<span>Width</span><br>
+					<input type="text" pattern="[0-9]{1,2}" name="width"/>
+				</div>
+				<div>
+					<span>Growth Ammount</span><br>
+					<input type="text" pattern="[0-9]{1,2}" name="growthAmm"/>
+				</div>
+				<div>
+					<span>Growth Rate</span><br>
+					<input type="text" pattern="[0-9]{1,2}" name="growthRate"/>
+				</div>
+				<div>
+					<span>Number of Circles</span><br>
+					<input type="text" pattern="[0-9]{1,2}"  name="numCircles"/>
+				</div>
+				<div>
+					<button type="submit" form="form1" value="start">Start</button>
+				</div>
+			</form>
+		</div>
+		<div id="main">
+			<h1> Animation Display Area <a href="../index.html">#Home</a></h1>
+		</div>
+	</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

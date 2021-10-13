@@ -1,0 +1,59 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-auto-rows: minmax(70vh, 100vh);
+}
+
+#side{
+	grid-column: 1/2;
+	background-color: #ccc;
+}
+
+#main{
+	grid-column: 2/3;
+	background-color: #e4f2;
+	position: relative;
+}
+#main h1{
+	text-align: center;
+}
+
+#form-control div{
+	margin-bottom: 20px;
+}
+
+#form-control{
+	position: relative;
+	top: 300px;
+	left: 50px;
+}
+#form-control input{
+	border: 1px solid lightgray;
+	line-height: 30px;
+	border-radius: 5px;
+}
+
+#form-control button{
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+}
+
+#form-control button:hover{
+	background-color: lightcoral;
+	cursor: pointer;
+}
+
+
+.circle{
+	position: absolute;
+	border-radius: 50%;
+	min-height: 50px;
+	min-height: 50px;
+	background-color: #fff;
+}
