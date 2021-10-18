@@ -1,0 +1,52 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 20vw 80vw;
+}
+
+.container > div{
+	min-height: 100vh;
+}
+
+#side{
+	grid-column: 1/2;
+	background-color: #e8e4df;
+}
+
+#main{
+	grid-column: 2/3;
+	background-color: lightblue;
+	color: black;
+	padding-top: 100px;
+	padding-left: 100px;
+}
+
+#form_action{
+	margin-top: 100px;
+	margin-left: 50px;
+}
+
+#form_action input{
+	margin-left: 10px;
+	margin-right: 5px;
+	line-height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}
+
+#form_action button{
+	margin-left: 15px;
+	line-height: 30px;
+	padding: 0px 7px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}
+
+a{
+	color: black;
+	font-size: 20pt;
+}

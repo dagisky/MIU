@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="<%= css %>">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div id="side">		
+		</div>
+		<div id="main">			
+			<ul>
+				<% for(p of products){ %>
+					<li><a href="/product?id=<%= p.id %>"><%= p.name %></a></li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
