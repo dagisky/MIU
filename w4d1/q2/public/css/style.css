@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#container{
+	padding: 20px;
+	padding-top: 100px;
+	max-width: 60vw;
+	margin: auto;
+
+}
+
+#form_action input{
+	line-height: 15pt;
+	border: 1px solid lightgray;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+#form_action button{
+	margin-top: 20px;
+}

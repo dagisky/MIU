@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="<%= css %>">
+	<title>Cookie Storage</title>
+</head>
+<body>
+	<div id="container">
+		<fieldset>
+			<legend>Please provide cookie key and value</legend>
+			<form d="form_action" action="/add" method="post">
+				<div>
+					<span>Key</span><br>
+					<input type="text" name="key">
+				</div>
+				<div>
+					<span>Value</span><br>
+					<input type="text" name="value">
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</fieldset>
+		<table>
+			<tr>
+				<td>Key</td>
+				<td>Value</td>
+			</tr>
+			<% for(key of Object.keys(cookies)){ %>
+				<tr>
+					<td><%= key %></td>
+					<td><%= cookies[key] %></td>
+				</tr>
+			<% } %>
+		</table>
+	</div>
+
+</body>
+</html>

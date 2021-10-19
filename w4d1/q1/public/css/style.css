@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#container{
+	max-width: 50vw;
+	min-height: 100vh;
+	margin: auto;
+	padding-left: 20px;
+	padding-top: 100px;
+}
+
+fieldset{
+	border: none;
+	border-right: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+fieldset form{
+	margin-top: 20px;
+}
+
+fieldset form input{
+	line-height: 15pt;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+fieldset form button{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#container table{
+	margin-top: 30px;
+	border: 1px dashed lightgray;
+	border-radius: 5px;
+
+}
+
+#container table tr{
+	border-bottom: 1px dashed lightgray;
+	padding: 10px;
+}
+
+ #container table td{
+ 	border-left: 1px dashed lightgray;
+ }
