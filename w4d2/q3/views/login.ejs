@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="<%= css %>">
+	<title>Login</title>
+</head>
+<body>
+	<div id="container">
+		<fieldset>
+			<legend>Login Form</legend>
+			<form id="form-control" action="/login" method="post">
+				<div>
+					<span>Username: </span><br>
+					<input type="text" name="username">
+				</div>
+				<div>
+					<span>Password: </span><br>
+					<input type="password" name="password">
+				</div>
+				<button type="submit">Login</button>
+				<% if(error) { %>
+					<p id="error"><%= error %></p>
+				<% } %>
+			</form>
+			<p>
+				Use one of the following credentials<br>
+				{username:"dag", password:"123"}, <br>
+				{username:"lolo", password:"1q2w3e"}
+
+			</p>
+		</fieldset>
+	</div>
+</body>
+</html>
