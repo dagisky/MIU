@@ -43,8 +43,8 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public PostDto update(PostDto postDto) {
-        return modelMapper.map(postRepo.update(modelMapper.map(postDto, Post.class)), PostDto.class);
+    public PostDto update(long id, PostDto postDto) {
+        return modelMapper.map(postRepo.update(id, modelMapper.map(postDto, Post.class)), PostDto.class);
     }
 
 

@@ -46,23 +46,10 @@ public class PostRepoImpl implements PostRepo{
     }
 
     @Override
-    public Post update(Post post) {
-        Post p = posts.stream().filter(ps-> ps.getId() == post.getId()).findFirst().orElse(null);
+    public Post update(long id, Post post) {
+        Post p = posts.stream().filter(ps-> ps.getId() == id).findFirst().orElse(null);
         posts.set(posts.indexOf(p), post);
-//        if(p != null){
-//            p.setTitle(post.getTitle());
-//            p.setAuthor(post.getAuthor());
-//            p.setContent(post.getContent());
-//        }
 
-//        for(Post p: this.posts){
-//            if(p.getId() == post.getId()){
-//                p.setAuthor(post.getAuthor());
-//                p.setContent(post.getContent());
-//                p.setTitle(post.getTitle());
-//                return post;
-//            }
-//        }
         return p;
     }
 
