@@ -1,17 +1,14 @@
 package com.example.basicjpa.Repositories;
 
 import com.example.basicjpa.domain.Course;
+import com.example.basicjpa.domain.Department;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 
 @Repository
-public class CourseRepository {
-    @Autowired
-    EntityManager em;
+public interface CourseRepository extends JpaRepository<Course, Long> {
 
-    public Course findById(Long id){
-        return em.find(Course.class, id);
-    }
 }
