@@ -12,4 +12,5 @@ public interface PostService {
     public PostDto save(PostDto post);
     public void delete(PostDto post);
     public PostDto update(long id, PostDto post);
+
 }

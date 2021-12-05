@@ -1,6 +1,6 @@
 package com.example.lab3.controller;
 
-import com.example.lab3.domain.User;
+import com.example.lab3.dtos.PostDto;
 import com.example.lab3.dtos.UserDto;
 import com.example.lab3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +35,9 @@ public class UserController {
     @PutMapping("/{id}")
     public UserDto update(@PathVariable("id") long id, @RequestBody UserDto userDto){
         return userService.update(id, userDto);
+    }
+    @GetMapping("/filter")
+    public List<PostDto> findAllWithPost(){
+        return userService.findAllWithPost();
     }
 }

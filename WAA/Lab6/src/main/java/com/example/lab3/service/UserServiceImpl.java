@@ -1,6 +1,7 @@
 package com.example.lab3.service;
 
 import com.example.lab3.domain.User;
+import com.example.lab3.dtos.PostDto;
 import com.example.lab3.dtos.UserDto;
 import com.example.lab3.helper.ListMapper;
 import com.example.lab3.repo.UserRepo;
@@ -57,5 +58,10 @@ public class UserServiceImpl implements UserService{
         u.setName(userDto.getName());
         u.setPosts(userDto.getPosts());
         return modelMapper.map(userRepo.save(u), UserDto.class);
+    }
+
+    @Override
+    public List<PostDto> findAllWithPost() {
+        return (List<PostDto>) userToUserDtoListMapper.mapList(userRepo.findAllWithPost(), new UserDto());
     }
 }
