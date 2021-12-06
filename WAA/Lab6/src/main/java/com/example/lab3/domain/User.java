@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
@@ -18,8 +15,11 @@ public class User {
     @Id
     @GeneratedValue
     private long id;
-
     private String name;
-    @OneToMany
+    private String username;
+    private String password;
+    @OneToMany(mappedBy = "author")
     private List<Post> posts;
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<Role> roles;
 }
