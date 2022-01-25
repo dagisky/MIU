@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 
@@ -18,12 +19,16 @@
 				<td>${car.model}</td>
 				<td>${car.year}</td>
 				<td>${car.color}</td>
+				<sec:authorize access="hasRole('ADMIN')">
 				<td><a href="cars/${car.id}">edit</a></td>
+				</sec:authorize>
 			</tr>
 		</c:forEach>
 	</table>
-
+	<sec:authorize access="hasRole('ADMIN')">
 	<a href="cars/add"> Add a Car</a>
+	</sec:authorize>
+	<a href="logout">Logout</a>
 </body>
 
 </html>
